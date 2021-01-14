@@ -68,6 +68,7 @@
                                     @foreach($food->ingredients as $ingredient)
                                                 <h4 style="display: inline">{{$ingredient->name}},</h4>
                                         @endforeach
+                                    <h4 style="display: inline">Salt.</h4>
                                     </div>
                             </div>
                         </div>

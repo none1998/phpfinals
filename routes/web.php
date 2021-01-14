@@ -30,3 +30,7 @@ Route::post('/users/logout', [\App\Http\Controllers\LoginController::class, 'log
 
 Route::get('/customer', [\App\Http\Controllers\PostController::class, 'customer'])->middleware('auth');
 Route::get('/customer/{food}/buy', [\App\Http\Controllers\PostController::class, 'buy'])->name('foods.buy')->middleware('auth');
+
+Route::get('/users/register', [\App\Http\Controllers\LoginController::class, 'register'])->name('register');
+Route::post('/store', [\App\Http\Controllers\LoginController::class, 'store'])->name('store');
+//Route::post('/store', "LoginController@store");

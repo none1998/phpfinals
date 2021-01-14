@@ -44,28 +44,30 @@
 
     </style>
 </head>
-<form method="post" action="{{route('post_login')}}">
+<form method="post" action="{{URL::to('/store')}}">
     @csrf
     <div align="center">
         </br>
         <label>Username</label>
         </br>
-        <input type="text" name="name" class="form-control">
+        <input type="text" name="name" value="" class="form-control">
+        </br>
+        <label>Email</label>
+        </br>
+        <input type="text" name="email" value="" class="form-control">
+
+        <input type="hidden" name="_token" value="{{csrf_token()}}" class="form-control">
+
         </br>
         <label>Password</label>
         </br>
-        <input type="password" name="password" class="form-control">
+        <input type="password" name="password" value="" class="form-control">
         </br>
-        <button type="submit">Login</button>
-    </div>
-
-    <div align="center">
-        <p><h3>Use This Data To Login:</h3></p>
-        <p>Username: admin</p>
-        <p>Password: admin</p>
+        <button type="submit">Register</button>
+        </br>
     </div>
 </form>
 <div align="center">
-    <button align="center" onclick="location.href='/users/register'">Register</button>
+<button align="center" onclick="location.href='/users/login'">Login</button>
 </div>
 </html>

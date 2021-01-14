@@ -9,7 +9,7 @@
                 <div><img style="border-radius: 8px" width="30%" src="{{$food->image}}"></div>
                 </br>
                 <div align="center">
-                    <a href="{{route('foods.buy',$food->id)}}" class="text-sm text-gray-700 underline" style="
+                    <a onclick="myFunction()" href="{{route('foods.buy',$food->id)}}" class="text-sm text-gray-700 underline" style="
                         color: #fff !important;
                         text-transform: uppercase;
                         text-decoration: none;
@@ -19,6 +19,11 @@
                         display: inline-block;
                         border: none;
                         transition: all 0.4s ease 0s;">Buy Now</a>
+                    <script>
+                        function myFunction() {
+                            alert("Thank You, You Bought The Product.");
+                        }
+                    </script>
                     <i class="fa fa-pencil-square"></i>
                 </div>
             </div>
